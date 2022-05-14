@@ -1,0 +1,12 @@
+version: '3.4'
+services:
+  app:
+    build:
+      context: .
+    networks:
+      - apps
+    restart: unless-stopped
+networks:
+  apps:
+    driver: bridge
+    external: true
